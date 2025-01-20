@@ -4,6 +4,6 @@
 
 <div class="text-center my-8">
     <h1 class="text-4xl font-bold text-primary">
-        {nome ? nome : "User"}'s Form
+        Form di {nome ? nome : "User"}
     </h1>
 </div>
