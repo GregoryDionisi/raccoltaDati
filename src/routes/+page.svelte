@@ -69,7 +69,7 @@
 
 <div class="container mx-auto p-4">
     {#if formState.step >= QUESTION.length}
-        <p class="text-center text-2xl font-semibold">Thank you for your {formState.answers.nome} answers!</p>
+        <p class="text-center text-2xl font-semibold">Thank you for your answers, {formState.answers.nome}!</p>
         <!-- Riepilogo risposte -->
         <div class="my-8 p-6 border border-gray-300 rounded-lg shadow-lg">
             <h2 class="text-2xl font-semibold mb-4">Riepilogo delle tue risposte</h2>
