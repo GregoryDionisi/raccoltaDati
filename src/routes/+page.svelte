@@ -98,7 +98,6 @@
     {#each QUESTION as {id, question, type, options}, index}
         {#if formState.step === index} <!-- Per ogni domanda, verifica se formState.step corrisponde all'indice corrente. -->
             <div class="my-6 p-6 border border-gray-300 rounded-lg shadow-lg">
-                <h2 class="text-lg font-semibold mb-4">{question}</h2>
                 {@render formStep({id, question, type, options})}
                 {#if formState.error}
                     <p class="text-red-500">{formState.error}</p>
