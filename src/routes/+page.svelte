@@ -32,7 +32,7 @@
         {
             id: "azienda",
             question: "In quali aziende hai lavorato?",
-            type: "select",
+            type: "checkbox",
             options: ["Google", "Microsoft", "Amazon", "Altro"]
         },
         {
@@ -149,6 +149,21 @@
                         value={option}
                         bind:group={formState.answers[id]}
                         class="radio"
+                    />
+                    <span>{option}</span> <!--tutti i radio buttons hanno lo stesso nome in modo che quando viene selezionato uno gli altri vengono deselezionati (comportamento di default dei radio buttons)-->
+                </label> <!--bind:group utilizzato quando vuoi associare più input dello stesso gruppo a una singola variabile  e si usa solitamente con radio buttons e checkbox-->
+            {/each}
+        </div>
+        {:else if type === "checkbox"}
+        <div class="space-y-2">
+            {#each options as option}
+                <label class="flex items-center space-x-2">
+                    <input
+                        type="checkbox"
+                        name={id}
+                        value={option}
+                        bind:group={formState.answers[id]}
+                        class="checkbox"
                     />
                     <span>{option}</span> <!--tutti i radio buttons hanno lo stesso nome in modo che quando viene selezionato uno gli altri vengono deselezionati (comportamento di default dei radio buttons)-->
                 </label> <!--bind:group utilizzato quando vuoi associare più input dello stesso gruppo a una singola variabile  e si usa solitamente con radio buttons e checkbox-->
